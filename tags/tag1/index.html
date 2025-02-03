@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en-us"
+<html lang="zh"
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tag1 | Lavender Li Website</title>
 
     
+  
+    <link href="/site/favicon.ico" rel="icon" type="image/x-icon" />
+  
 
-<link rel="canonical" href="http://localhost:1313/tags/tag1/" />
+
+<link rel="canonical" href="https://saddumplinglx.github.io/tags/tag1/" />
 
 
 
-<meta name="author" content="" />
+<meta name="author" content="Lavender Li" />
 <meta name="description" content="" />
 
 
@@ -22,10 +26,10 @@
 <meta name="generator" content="Hugo 0.143.0">
 
 
-<meta property="og:url" content="http://localhost:1313/tags/tag1/">
+<meta property="og:url" content="https://saddumplinglx.github.io/tags/tag1/">
   <meta property="og:site_name" content="Lavender Li Website">
   <meta property="og:title" content="Tag1">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="zh">
   <meta property="og:type" content="website">
 
 
@@ -37,7 +41,9 @@
 
 
 
-<link rel="stylesheet" href="/css/output.css" />
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
 
@@ -56,15 +62,18 @@
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
   
     <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
         <div class="h-10 rounded-full">
-          <img src="/" alt="" />
+          <img src="/site/avatar.jpg" alt="" />
         </div>
       </div>
 
@@ -79,40 +88,30 @@
         
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
-    <ion-icon name="archive"></ion-icon>
-    Archives
-  </a>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
 </li>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
     <ion-icon name="grid"></ion-icon>
-    All Categories
+    所有分类
   </a>
 </li>
 
@@ -120,9 +119,9 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
     <ion-icon name="pricetags"></ion-icon>
-    All Tags
+    所有标签
   </a>
 </li>
 
@@ -137,44 +136,38 @@
       
       
       
-      
-
-      
-      
-
-      
-
+      <div role="link" tabindex="0"
+        class="text-sm font-semibold cursor-pointer hover:underline"
+        @click="flip = !flip"
+        title="关于"
+      >关于</div>
       
       
 
+      
+      
+        
+      
 
-
-
+      
 
       
       
 
 
 
-
-
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
 
 
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
   <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
 </a>
 
 
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
   <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
 </a>
 
@@ -200,7 +193,7 @@
 
   <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
     <h1 class="text-2xl">Tag1</h1>
-    <p class="text-sm">1 article</p>
+    <p class="text-sm">1篇文章</p>
     <div class="flex flex-wrap gap-4 mt-6">
       
 
@@ -233,17 +226,17 @@
   
   <figure>
     
-    <img src="/img/cover.jpg" alt="Article Title" />
+    <img src="/img/cover.jpg" alt="第一篇文章" />
     
   </figure>
   
 
   <div class="card-body">
-    <h2 class="card-title">Article Title</h2>
+    <h2 class="card-title">第一篇文章</h2>
 
     <p class="date text-base-content/60">
     
-      Monday, Feb 3, 2025
+      星期一, 2月 3, 2025
     
     </p>
 
@@ -270,7 +263,7 @@
 
       <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
-        <span>1 minute read</span>
+        <span>1分钟阅读</span>
       </div>
     </div>
   </div>
@@ -292,17 +285,13 @@
 
   <div>
   
-  <p>© 2025 Lavender Li Website</p>
+  <p>
+    © 2025 Lavender Li Website
+  </p>
   
 
   
-  <p class="text-sm">
-    🌱
-    <span class="text-base-content/60">
-      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
-      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
-    >
-  </p>
+  <p> </p>
   
 </div>
 
@@ -344,6 +333,21 @@
   
   
   
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Cut out summary from your post content here.</p>
+<p>The remaining content of your post.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
   
 
   
@@ -358,17 +362,13 @@
 
   <div>
   
-  <p>© 2025 Lavender Li Website</p>
+  <p>
+    © 2025 Lavender Li Website
+  </p>
   
 
   
-  <p class="text-sm">
-    🌱
-    <span class="text-base-content/60">
-      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
-      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
-    >
-  </p>
+  <p> </p>
   
 </div>
 
@@ -407,8 +407,8 @@
     </div>
 
     <script>
-  window.lightTheme =  null 
-  window.darkTheme =  null 
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
 </script>
 
 
@@ -417,12 +417,16 @@
 
   
   
-  <script src="/js/grid.js"></script>
+    
+  
+  <script src="/js/grid.min.js"></script>
 
 
 
 
-<script src="/js/main.js"></script>
+  
+
+<script src="/js/main.min.js"></script>
 
     
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag2 on Lavender Li Website</title>
-    <link>http://localhost:1313/tags/tag2/</link>
+    <link>https://saddumplinglx.github.io/tags/tag2/</link>
     <description>Recent content in Tag2 on Lavender Li Website</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Mon, 03 Feb 2025 02:03:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://saddumplinglx.github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Article Title</title>
-      <link>http://localhost:1313/posts/article-title/</link>
+      <title>第一篇文章</title>
+      <link>https://saddumplinglx.github.io/posts/article-title/</link>
       <pubDate>Mon, 03 Feb 2025 02:03:14 +0800</pubDate>
-      <guid>http://localhost:1313/posts/article-title/</guid>
+      <guid>https://saddumplinglx.github.io/posts/article-title/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
   </channel>
